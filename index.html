@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- fontawesome cdn -->
+  <script src="https://kit.fontawesome.com/eff165c927.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      font-family: "Inter", sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: hsl(233, 47%, 7%);
+    }
+
+    body>div {
+      background-color: hsl(244, 38%, 16%);
+      width: 80%;
+      height: 70vh;
+      margin: 10vh auto;
+      overflow: hidden;
+    }
+
+    body>div>* {
+      height: 70vh;
+
+    }
+
+    .text>h1 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 4rem;
+      font-family: "Lexnd deca", sans-serif;
+    }
+
+    .text>h1 span {
+      color: purple;
+    }
+
+    .text .desc {
+      color: rgb(198, 197, 197);
+      font-size: 1.1rem;
+    }
+
+    .text>div .features {
+      margin-top: 15vh;
+      color: rgb(237, 237, 237);
+      display: inline-block;
+      width: 30%;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .text>div .features span {
+      display: block;
+      text-align: center;
+    }
+
+    .text>div .features span:nth-child(2) {
+      color: rgb(198, 197, 197);
+      font-size: 1.1rem;
+    }
+
+    .text {
+      padding: 2rem;
+      width: 49%;
+      float: left;
+    }
+
+    .image {
+      width: 49%;
+      float: right;
+      position: relative;
+
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .image-mask {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(to right, hsl(277, 64%, 61%), hsl(277, 64%, 61%));
+      opacity: 0.5;
+    }
+
+    @media (max-width: 992px) {
+      body>div {
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .text {
+        width: 100%;
+        height: 60%;
+      }
+
+      .image {
+        width: 100%;
+        height: 40%;
+      }
+
+      .text>div {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+      }
+    }
+
+    @media (max-width: 800px) {
+      body>div {
+        height: 100vh;
+      }
+
+      .text {
+        height: 55%;
+      }
+
+      .image {
+        height: 45%;
+      }
+    }
+
+    @media (max-width:680px) {
+
+
+      .text>div .features {
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+
+      .text>h1 {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width:600px) {
+      /* body>div {
+        height: 120vh;
+      } */
+
+      .text>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+      }
+
+      .text>div .features {
+        margin-top: 2vh;
+      }
+    }
+
+    @media (max-width: 472px) {
+      body>div {
+        min-height: 120vh;
+      }
+    }
+
+
+
+    /* @media (max-width:1350px) {
+      .text>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+      }
+    } */
+
+    @media (max-width: 1225px) {
+      .text>div .features {
+        font-size: 1.5rem;
+      }
+
+      .text>div .features span:nth-child(2) {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 1000px) {}
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <div class="text">
+      <h1> Get <span>insights</span> that help your business grow.</h1>
+
+      <p class="desc">Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.</p>
+
+      <div>
+        <p class="features"><span>10k+</span><span>companies</span></p>
+        <p class="features"><span>314 </span><span>templates</span></p>
+        <p class="features"><span>12m+ </span><span>queries</span></p>
+      </div>
+    </div>
+    <div class="image">
+      <img src="images/image-header-desktop.jpg" alt="">
+      <div class="image-mask"></div>
+    </div>
+  </div>
+</body>
+
+</html>
